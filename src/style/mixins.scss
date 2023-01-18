@@ -1,0 +1,26 @@
+@import './variables.scss';
+
+@mixin default-border {
+    background: linear-gradient(135deg, transparent 24px, $default-color 0);
+}
+
+@mixin active-border {
+    background: linear-gradient(135deg, transparent 24px, $active-color 0);
+}
+
+@mixin disable-border {
+    background: linear-gradient(135deg, transparent 24px, $disable-color 0);
+}
+
+@mixin cardUpperText {
+    content: 'Сказочное заморское явство';
+    display: block;
+    position: absolute;
+    top: 21px;
+    right: 64px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #666666;
+}

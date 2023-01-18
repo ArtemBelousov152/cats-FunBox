@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@100&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+h1,h2,h3,h4,h5 {
+  margin: 0;
+}
+
+@font-face {
+  font-family: "TrebuchetMs";
+  src: url("./assets/fonts/trebuchetms.ttf") format("woff2");
+}

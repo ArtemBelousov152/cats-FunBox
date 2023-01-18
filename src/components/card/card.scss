@@ -1,0 +1,172 @@
+@import '../../style/mixins.scss';
+@import '../../style/mixins.scss';
+
+.card {
+    width: 320px;
+    height: 480px;
+    background: linear-gradient(135deg, transparent 24px, #F2F2F2 0);
+    border-radius: 12px;
+    padding: 45px 61px 0 48px;
+    font-family: 'Trebuchet MS';
+    position: relative;
+    overflow: hidden;
+
+    &_disable {
+        filter: opacity(40%);
+    }
+
+    &__wrapper {
+        background: linear-gradient(135deg, transparent 24px, #F2F2F2 0);
+        border-radius: 12px;
+        position: relative;
+    }
+
+    &__header {
+        position: absolute;
+        top: 21px;
+        left: 51px;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+
+        &_default {
+            color: #666666;
+        }
+
+        &_hover {
+            color: $active-color;
+        }
+    }
+
+    &__border {
+        width: 328px;
+        height: 488px;
+        margin-right: 80px;
+        @include default-border;
+        border-radius: 12px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &_active {
+            @include active-border;
+        }
+
+        &_disable {
+            @include disable-border;
+        }
+
+        &:nth-last-child(1) {
+            margin-right: 0;
+        }
+    }
+
+    &__title {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 56px;
+    }
+
+    &__flavored {
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 28px;
+    }
+
+    &__descr {
+        width: 150px;
+        margin-top: 15px;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 16px;
+        color: #666666;
+    }
+
+    &__cat {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+    }
+
+    &__weigth {
+        text-align: center;
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        position: absolute;
+        bottom: 16px;
+        right: 16px;
+        background-color: $default-color;
+        color: #FFFFFF;
+        font-family: 'Trebuchet MS';
+        font-style: normal;
+        font-size: 21px;
+        line-height: 10px;
+        padding-top: 6px;
+
+        &_active {
+            background-color: $active-color;
+        }
+
+        &_disable {
+            background-color: $disable-color;
+        }
+
+        span {
+            font-weight: 400;
+            font-size: 42px;
+            line-height: 50px;
+        }
+    }
+
+    &__subtext {
+        text-align: center;
+        position: absolute;
+        font-family: 'Trebuchet MS';
+        width: 100%;
+        bottom: -34px;
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 15px;
+        color: #FFFFFF;
+
+        &_disable {
+            color: #FFFF66;
+        }
+    }
+
+    &__buy {
+        cursor: pointer;
+        color: $default-color;
+
+        span {
+            color: $default-color;
+            border-bottom: 1px dashed $default-color;
+        }
+    }
+}
+
+@media (max-width: 1150px) {
+    .card {
+        &__border {
+            &:nth-last-child(1) {
+                margin-top: 100px;
+            }
+
+            &:nth-last-child(2) {
+                margin-right: 0;
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .card {
+        &__border {
+            margin-top: 100px;
+            margin-right: 0;
+        }
+    }
+}
